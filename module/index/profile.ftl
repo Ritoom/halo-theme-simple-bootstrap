@@ -1,6 +1,6 @@
 <#--主页的用户信息ok-->
-<section id="profile" class="mt-4 bg-white d-xl-block d-none">
-    <div class="card">
+<section id="profile" class="mt-4 bg-white d-xl-block d-none" style="position: fixed;">
+    <div class="card border-light">
         <div class="card-body d-flex flex-column align-items-center">
             <#--头像和个人信息-->
             <div class="mt-4 mb-4point5 w-100 d-flex justify-content-center">
