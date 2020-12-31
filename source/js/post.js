@@ -199,7 +199,7 @@ $(function () {
     };
 
     /**
-     * 初始化图片点击效果并在图片下面添加上解释说明，需要配合fancybox.js使用
+     * 初始化图片点击效果
      */
     let zoomImages = (imageSelector) => {
         $(imageSelector).each(function () {
@@ -209,7 +209,10 @@ $(function () {
         });
         // 为fancybox.js做配置
         $("[data-fancybox='images']").fancybox({
-            buttons: ['zoom', 'download', 'close', 'thumbs']
+            buttons: ['zoom', 'download', 'close', 'thumbs'],
+            helpers: {
+                title : { type : 'inside' }
+            }
         });
     };
 
