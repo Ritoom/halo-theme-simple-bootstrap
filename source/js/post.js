@@ -209,10 +209,7 @@ $(function () {
         });
         // 为fancybox.js做配置
         $("[data-fancybox='images']").fancybox({
-            buttons: ['zoom', 'download', 'close', 'thumbs'],
-            helpers: {
-                title : { type : 'inside' }
-            }
+            buttons: ['zoom', 'download', 'close', 'thumbs']
         });
     };
 
