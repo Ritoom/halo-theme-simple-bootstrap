@@ -1,7 +1,6 @@
 <#--主页的用户信息ok-->
 <section id="profile" class="mt-4 bg-white d-xl-block d-none">
     <div class="card">
-        <div class="card-header"><i class="fas fa-user mr-2"></i>个人信息</div>
         <div class="card-body d-flex flex-column align-items-center">
             <#--头像和个人信息-->
             <div class="mt-4 mb-4point5 w-100 d-flex justify-content-center">
@@ -25,36 +24,6 @@
                 </div>
             </div>
 
-            <#--分割线-->
-            <div class="w-100 border-top"></div>
-
-            <#--数量统计部分-->
-            <div class="mt-4 w-100 d-flex justify-content-around">
-                <div class="w-100 text-center">
-                    <small class="text-muted">文章数量</small>
-                    <span class="d-block h2 mt-2">
-                        <@postTag method="count">
-                            ${count!}
-                        </@postTag>
-                    </span>
-                </div>
-                <div class="w-100 text-center">
-                    <small class="text-muted">分类数量</small>
-                    <span class="d-block h2 mt-2">
-                        <@categoryTag method="count">
-                            ${count!}
-                        </@categoryTag>
-                    </span>
-                </div>
-                <div class="w-100 text-center">
-                    <small class="text-muted">标签数量</small>
-                    <span class="d-block h2 mt-2">
-                        <@tagTag method="count">
-                            ${count!}
-                        </@tagTag>
-                    </span>
-                </div>
-            </div>
         </div>
 
         <div class="mb-4 mt-n2">
