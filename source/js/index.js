@@ -51,4 +51,31 @@ $(function () {
     autoResizeIframe();
     // 加入媒体控制
     $("video, audio").prop('controls', true);
+    //首页大图悬浮
+    var fix = $("#profile");
+    var end = $("footer");
+    var fixTop = fix.offset().top,              //滚动悬浮块与顶部的距离
+        fixHeight = fix.height(); 
+    var endTop, miss;
+    $(window).scroll(function() {
+        //页面与顶部高度
+        var docTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+
+        //如果有结束块
+        if (end.length > 0) {
+            endTop = end.offset().top;
+            miss = endTop - docTop - fixHeight;
+        }
+
+        if (fixTop < docTop) {
+            fix.css({'position': 'fixed'});
+            if ((end.length > 0) && (endTop < (docTop + fixHeight))) {
+                fix.css({top: miss});           //滚动悬浮块滑到结束块上时，top值为负，即慢慢隐藏出浏览器
+            } else{
+                fix.css({top: 0});              //滚动悬浮块未到结束块上时，top为0
+            }
+        } else {
+            fix.css({'position': 'static'});
+        }
+    })
 });
